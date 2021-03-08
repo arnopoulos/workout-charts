@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tw2-YD-AWW">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AZW-dk-UyO">
+            <objects>
+                <navigationController id="tw2-YD-AWW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cRA-10-nRp">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Complementary"/>
+                        <color key="barTintColor" name="Secondary"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="yhi-LA-7op" kind="relationship" relationship="rootViewController" id="BoA-3V-l2H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4Z-98-ufe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-719" y="-103"/>
+        </scene>
+        <!--One Rep Max-->
+        <scene sceneID="t2C-Ye-WjH">
+            <objects>
+                <tableViewController id="yhi-LA-7op" customClass="ExerciseListViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DbV-4e-h3d">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="Complementary"/>
+                        <color key="sectionIndexBackgroundColor" name="Primary"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Summary" rowHeight="44" id="FAg-Nv-9pw" customClass="ExerciseSummaryCell" customModule="App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="428" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FAg-Nv-9pw" id="7HZ-3m-81e">
+                                    <rect key="frame" x="0.0" y="0.0" width="396.66666666666669" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJs-jm-xPe">
+                                            <rect key="frame" x="20" y="11.666666666666664" width="64" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1E-Tq-3p0">
+                                            <rect key="frame" x="334.66666666666669" y="11.666666666666664" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="K1E-Tq-3p0" secondAttribute="trailing" constant="20" symbolic="YES" id="6kD-vw-Lh6"/>
+                                        <constraint firstItem="K1E-Tq-3p0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UJs-jm-xPe" secondAttribute="trailing" constant="20" id="KDq-k9-fMP"/>
+                                        <constraint firstItem="K1E-Tq-3p0" firstAttribute="centerY" secondItem="7HZ-3m-81e" secondAttribute="centerY" id="Oif-VO-vFh"/>
+                                        <constraint firstItem="UJs-jm-xPe" firstAttribute="centerY" secondItem="7HZ-3m-81e" secondAttribute="centerY" id="fJy-hn-Y3D"/>
+                                        <constraint firstItem="UJs-jm-xPe" firstAttribute="leading" secondItem="7HZ-3m-81e" secondAttribute="leading" constant="20" symbolic="YES" id="vN0-z5-kYO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="Primary"/>
+                                <connections>
+                                    <outlet property="title" destination="UJs-jm-xPe" id="ugU-37-t46"/>
+                                    <outlet property="weight" destination="K1E-Tq-3p0" id="WyB-Mh-cJ1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yhi-LA-7op" id="HYb-tz-3bE"/>
+                            <outlet property="delegate" destination="yhi-LA-7op" id="Gs9-V1-gEN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="One Rep Max" id="KAt-Ab-0pb"/>
+                    <connections>
+                        <outlet property="view" destination="DbV-4e-h3d" id="4by-6w-SLG"/>
+                        <segue destination="gKv-I4-dwn" kind="show" identifier="Summary" id="gqD-RZ-1vv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MkU-et-HBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="-103.125"/>
+        </scene>
+        <!--Exercise Summary View Controller-->
+        <scene sceneID="cEm-4x-ozS">
+            <objects>
+                <viewController id="gKv-I4-dwn" customClass="ExerciseSummaryViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G5G-bD-2ac">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CwA-uj-Ln1"/>
+                        <color key="backgroundColor" name="Primary"/>
+                        <color key="tintColor" name="Complementary"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dnl-2p-8Kf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZu-ZY-rAy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="-103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Complementary">
+            <color red="0.92941176470588238" green="0.46274509803921571" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.13725490196078433" green="0.15686274509803921" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.30196078431372547" green="0.32156862745098042" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
